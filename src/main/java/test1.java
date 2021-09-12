@@ -75,8 +75,12 @@ public class test1 {
     //вывести массив на экран в виде: [1, 5, 3, 7, 10, 2, 5]
     //правильное решение - 0.5 балла
     public static void printArray(int[] array) {
-        String array2 = java.util.Arrays.toString(array);
-        System.out.println(array2);
+        String sep = "[";
+        for (int ints:array){
+            System.out.print(sep + ints);
+            sep=", ";
+        }
+        System.out.print("]\n");
     }
 
     //вывести двойной массив на экран в виде:
@@ -86,8 +90,7 @@ public class test1 {
     //правильное решение - 0.5 балла
     public static void printArray(int[][] array) {
         for (int[] ints : array) {
-            String array2 = java.util.Arrays.toString(ints);
-            System.out.println(array2);
+            printArray(ints);
         }
     }
 
